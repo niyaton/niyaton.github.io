@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  siteUrl: 'https://niyaton.github.io',
   siteName: 'Kenji Fujiwara',
   metadata: createMetadata(),
   plugins: []
