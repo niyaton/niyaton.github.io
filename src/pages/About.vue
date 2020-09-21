@@ -3,7 +3,7 @@
     <h1>プロフィール</h1>
     <h2>個人情報</h2>
     <ul>
-      <li>名前：藤原 健二（Kenji Fujiwara）</li>
+      <li>名前：藤原 賢二（Kenji Fujiwara）</li>
       <li>連絡先： fujiwara [at] toyota-ct.ac.jp</li>
       <li>出身地： 大阪府和泉市</li>
       <li>生年月日： 1988年03月10日</li>
