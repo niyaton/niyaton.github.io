@@ -1,0 +1,9 @@
+- name: github
+  id: 1
+  link: https://github.com/niyaton
+  icon: fab github
+
+- name: twitter
+  id: 2
+  link: https://www.twitter.com/niyaton
+  icon: fab twitter

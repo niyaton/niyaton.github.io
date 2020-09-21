@@ -1,33 +1,21 @@
 <template>
   <Layout>
+    <h1>このページについて</h1>
+    <p>Gridsomeを使用して個人ページを作成しました．個人ページはNAIST時代に作っていたのですがその現職に移った後に5年程放置していました．</p>
 
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <p>業績ページはresearchmapで管理している業績を表示するようにしていますが現在開発途中なので中途半端な表示になっています．</p>
 
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <p>Homeページ（このページ）を作ってしまったけど，Aboutのページをメインにした方が良かったのではないかと思っています．何か使い道があればこのページにも情報を増やしていきます．</p>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Home'
   }
 }
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
 </style>

@@ -1,15 +1,19 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+    <section class="pan-layout">
+      <Left />
+      <section class="pan-layout-overlay"></section>
+
+      <section class="pan-layout-right">
+        <Header />
+        <section class="pan-layout-content">
+          <slot/>
+        </section>
+      </section>
+
+      <slot name="footer" />
+      <Footer />
+    </section>
   </div>
 </template>
 
@@ -48,3 +52,11 @@ body {
   margin-left: 20px;
 }
 </style>
+<script>
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Left from "../components/Left";
+export default {
+  components: {Footer, Header, Left}
+}
+</script>
