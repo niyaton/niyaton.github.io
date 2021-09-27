@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v
         with:
-          - ref: main
+          ref: main
 
       - name: setup node
         uses: actions/setup-node@v1
