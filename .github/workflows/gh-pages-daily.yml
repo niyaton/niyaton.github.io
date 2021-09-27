@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v
         with:
-          - ref: main
+          ref: main
 
       - name: setup python to check modified date
         uses: actions/setup-python@v2
