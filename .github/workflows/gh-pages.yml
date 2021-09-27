@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - gridsome
+      - main
 
 jobs:
   build-deploy:
@@ -37,4 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: master
+          publish_branch: gh-pages
