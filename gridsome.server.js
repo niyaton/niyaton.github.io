@@ -24,6 +24,7 @@ module.exports = function (api) {
         gravatar_email: String
         footer: Footer
         left_side: LeftSide
+        researchmap_modified_date: String
       }
       
       type Footer {
@@ -54,6 +55,8 @@ module.exports = function (api) {
       papers.addNode(item);
     }
 
+    const res2 = await axios.get('https://api.researchmap.jp/fujiwara.kenji');
+    action.addMetadata('researchmap_modified_date', res2.data['rm:modified']);
   })
 
   api.createPages(({ createPage }) => {

@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <h1>業績（開発途中）</h1>
+    <h3 style="text-align: right">最終更新日時: {{ $static.metadata.modified_date | formatDate }}</h3>
     <h2>論文誌</h2>
     <ol>
       <li v-for="edge in $page.accepted_journals.edges">{{ edge.node | formatJaPaper }}</li>
@@ -17,6 +18,13 @@
   </Layout>
 </template>
 
+<static-query>
+query{
+  metadata {
+    researchmap_modified_date
+  }
+}
+</static-query>
 <page-query>
 query {
   accepted_journals: allPapers(filter: {published_paper_type: { eq: "scientific_journal" }, publication_date: { eq: "9999"}}, sortBy: "publication_date") {
@@ -111,6 +119,8 @@ query {
 </page-query>
 
 <script>
+import moment from 'moment';
+
 export default {
   metaInfo: {
     title: 'Publications'
@@ -161,6 +171,10 @@ export default {
         items.push(`${paper.publication_date}.`);
       }
       return items.join(' ');
+    },
+    formatDate: function(date){
+      let d = moment(date);
+      return d.format("YYYY年MM月DD日 HH時mm分");
     }
   }
 }
