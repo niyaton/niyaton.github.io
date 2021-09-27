@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1>業績（開発途中）</h1>
-    <h3 style="text-align: right">最終更新日時: {{ $static.metadata.modified_date | formatDate }}</h3>
+    <h3 style="text-align: right">最終更新日時: {{ $static.metadata.researchmap_modified_date | formatDate }}</h3>
     <h2>論文誌</h2>
     <ol>
       <li v-for="edge in $page.accepted_journals.edges">{{ edge.node | formatJaPaper }}</li>
