@@ -2,7 +2,7 @@ name: github pages (daily deploy)
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '30 * * * *'
 
 jobs:
   check:
@@ -32,7 +32,7 @@ jobs:
     needs: check
     if: needs.check.outputs.status == 'success'
     steps:
-      - uses: actions/checkout@v
+      - uses: actions/checkout@v2
         with:
           ref: main
 
