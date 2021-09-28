@@ -2,7 +2,7 @@ name: github pages (daily deploy)
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 * * * *'
 
 jobs:
   check:
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v
         with:
-          - ref: main
+          ref: main
 
       - name: setup node
         uses: actions/setup-node@v1
