@@ -1,7 +1,7 @@
 <template>
   <section class="pan-layout-header">
     <div class="pan-layout-header__menutoggle">
-      <i class="fas fa-bars"></i>
+      <font-awesome :icon="'bars'" v-on:click="$emit('openMenu')"></font-awesome>
     </div>
 
     <div class="pan-layout-header__content">

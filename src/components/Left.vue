@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <!-- TODO for close button (for mobile)
+    <!-- original code for close button
     <div
         class="pan-layout-left__close"
         {% if site.left_side %}
@@ -60,6 +60,9 @@
       <i class="fa fa-fw fa-times"></i>
     </div>
     -->
+    <div class="pan-layout-left__close" v-on:click="$emit('closeMenu')">
+      <font-awesome :icon="'times'" fixed-width></font-awesome>
+    </div>
   </section>
 </template>
 

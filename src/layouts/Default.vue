@@ -1,11 +1,11 @@
 <template>
   <div class="layout">
-    <section class="pan-layout">
-      <Left />
+    <section class="pan-layout" :class="{'pan-menu-open': isOpen}">
+      <Left @closeMenu="toggleMenu"/>
       <section class="pan-layout-overlay"></section>
 
       <section class="pan-layout-right">
-        <Header />
+        <Header @openMenu="toggleMenu"/>
         <section class="pan-layout-content">
           <slot/>
         </section>
@@ -57,6 +57,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Left from "../components/Left";
 export default {
-  components: {Footer, Header, Left}
+  components: {Footer, Header, Left},
+  data: () => {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.isOpen = !this.isOpen;
+    }
+  }
 }
 </script>
